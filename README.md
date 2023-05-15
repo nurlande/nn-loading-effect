@@ -7,7 +7,7 @@
 
 It is simple Text Loading Effect.
 
-<!-- [**Live Demo**](https://gapon2401.github.io/my-react-typescript-package/) -->
+[**Live Demo**](https://nurlande.github.io/nn-loading-effect/)
 
 ## Installation:
 
