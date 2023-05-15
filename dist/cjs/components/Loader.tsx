@@ -8,12 +8,18 @@ interface MainColors {
 }
 
 interface Props {
-  colors: MainColors;
+  colors?: MainColors;
   text?: string;
   styles?: CSSProperties
 }
 
-export default function Loader({ colors, text, styles }: Props) {
+const defaultColors = {
+  color1: 'blue',
+  color2: 'lightblue',
+  color3: 'aqua'
+}
+
+export default function Loader({ colors = defaultColors, text, styles }: Props) {
   const setColor = (varName: string, newColor: string) => {
     document.documentElement.style.setProperty(varName, newColor);
   };
@@ -26,7 +32,7 @@ export default function Loader({ colors, text, styles }: Props) {
 
   return (
     <div className="loader-header">
-      <h1 className="gradient-text loader-text" style={styles}>{text || 'nn-loading-effect'}</h1>
+      <h1 className="gradient-text loader-text" style={styles}>{text || 'LOADING...'}</h1>
     </div>
   );
 }

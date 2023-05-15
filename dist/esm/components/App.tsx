@@ -1,30 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import Loader from './Loader';
 
-type Props = {
-    value?: number
-}
-const MyCounter = ({ value = 0 }: Props) => {
-    const [counter, setCounter] = useState(0);
-
-    useEffect(() => {
-        setCounter(value)
-    }, [value])
-
-    const onMinus = () => {
-        setCounter((prev) => prev - 1)
-    };
-
-    const onPlus = () => {
-        setCounter((prev) => prev + 1)
-    };
-
+const App = () => {
     return (
-        <div>
-            <h1>Counter: {counter}</h1>
-            <button onClick={onMinus}>-</button>
-            <button onClick={onPlus}>+</button>
-        </div>
+        <Loader />
     )
 }
 
-export default MyCounter
+export default App

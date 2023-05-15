@@ -6,7 +6,7 @@ interface MainColors {
     color3: string;
 }
 interface Props {
-    colors: MainColors;
+    colors?: MainColors;
     text?: string;
     styles?: CSSProperties;
 }
