@@ -1,0 +1,119 @@
+:root {
+  --nn-first-color: red;
+  --nn-second-color: orange;
+  --nn-third-color: yellow;
+}
+
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: red;
+  display: inline-block;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    var(--nn-third-color, yellow),
+    orange,
+    red
+  );
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.loader-header {
+  margin-top: 1em;
+  margin-top: calc(40vh - 3em);
+  text-align: center;
+}
+
+.loader-text {
+  font-weight: bold;
+  font-size: calc(4rem + 1.5vw);
+  text-align: center;
+  margin: auto;
+}
+
+@keyframes example {
+  0% {
+    background-image: linear-gradient(
+      to right,
+      var(--nn-first-color, red),
+      var(--nn-second-color, orange),
+      var(--nn-third-color, yellow),
+      var(--nn-third-color, yellow),
+      var(--nn-second-color, orange),
+      var(--nn-first-color, red)
+    );
+  }
+  20% {
+    background-image: linear-gradient(
+      to right,
+      var(--nn-second-color, orange),
+      var(--nn-third-color, yellow),
+      var(--nn-third-color, yellow),
+      var(--nn-second-color, orange),
+      var(--nn-first-color, red),
+      var(--nn-first-color, red)
+    );
+  }
+  40% {
+    background-image: linear-gradient(
+      to right,
+      var(--nn-third-color, yellow),
+      var(--nn-third-color, yellow),
+      var(--nn-second-color, orange),
+      var(--nn-first-color, red),
+      var(--nn-first-color, red),
+      var(--nn-second-color, orange)
+    );
+  }
+  60% {
+    background-image: linear-gradient(
+      to right,
+      var(--nn-third-color, yellow),
+      var(--nn-second-color, orange),
+      var(--nn-first-color, red),
+      var(--nn-first-color, red),
+      var(--nn-second-color, orange),
+      var(--nn-third-color, yellow)
+    );
+  }
+  80% {
+    background-image: linear-gradient(
+      to right,
+      var(--nn-second-color, orange),
+      var(--nn-first-color, red),
+      var(--nn-first-color, red),
+      var(--nn-second-color, orange),
+      var(--nn-third-color, yellow),
+      var(--nn-third-color, yellow)
+    );
+  }
+  100% {
+    background-image: linear-gradient(
+      to right,
+      var(--nn-first-color, red),
+      var(--nn-first-color, red),
+      var(--nn-second-color, orange),
+      var(--nn-third-color, yellow),
+      var(--nn-third-color, yellow),
+      var(--nn-second-color, orange)
+    );
+  }
+}

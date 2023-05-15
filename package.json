@@ -1,0 +1,38 @@
+{
+  "name": "nn-loading-effect",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurlande"
+  },
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs && npm run copy-files:esm && npm run copy-files:cjs",
+    "prepare": "npm run build",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "copy-files:esm": "cp -R ./src/components/ ./dist/esm/components/",
+    "copy-files:cjs": "cp -R ./src/components/ ./dist/cjs/components/"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "loading-effect"
+  ],
+  "author": "Nurlan Dev",
+  "license": "MIT",
+  "peerDependencies": {
+    "@types/react": ">=16",
+    "react": ">=16",
+    "react-dom": ">=16",
+    "typescript": ">=5"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ]
+}
