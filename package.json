@@ -7,7 +7,7 @@
   "types": "./dist/esm/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nurlande"
+    "url": "git+https://github.com/nurlande/nn-loading-effect"
   },
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs && npm run copy-files:esm && npm run copy-files:cjs",
@@ -20,7 +20,7 @@
   "keywords": [
     "react",
     "typescript",
-    "loading-effect"
+    "nn-loading-effect"
   ],
   "author": "Nurlan Dev",
   "license": "MIT",

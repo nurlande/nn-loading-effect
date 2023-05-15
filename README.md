@@ -1,11 +1,9 @@
-# my-react-typescript-package
+# nn-loading-effect
 
 [![NPM version][npm-image]][npm-url]
 [![Build][github-build]][github-build-url]
 ![npm-typescript]
 [![License][github-license]][github-license-url]
-
-You can clone it and step by step create your own NPM package and publish it.
 
 It is simple Text Loading Effect.
 
@@ -37,7 +35,7 @@ root.render(
     <React.StrictMode>
         <div>
             <h2>Default loader</h2>
-            <Loader colors={{color1: 'blue', color2: 'aqua', color3: 'lightblue'}}/>
+            <Loader />
         </div>
         <hr />
         <div>
