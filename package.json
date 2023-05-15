@@ -1,38 +1,32 @@
 {
   "name": "nn-loading-effect",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir docs --public-url ."
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nurlande/nn-loading-effect"
+    "url": "git+https://github.com/nurlande/nn-loading-effect.git"
   },
-  "scripts": {
-    "build": "npm run build:esm && npm run build:cjs && npm run copy-files:esm && npm run copy-files:cjs",
-    "prepare": "npm run build",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
-    "copy-files:esm": "cp -R ./src/components/ ./dist/esm/components/",
-    "copy-files:cjs": "cp -R ./src/components/ ./dist/cjs/components/"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurlande/nn-loading-effect/issues"
   },
-  "keywords": [
-    "react",
-    "typescript",
-    "nn-loading-effect"
-  ],
-  "author": "Nurlan Dev",
-  "license": "MIT",
-  "peerDependencies": {
-    "@types/react": ">=16",
-    "react": ">=16",
-    "react-dom": ">=16",
-    "typescript": ">=5"
+  "homepage": "https://github.com/nurlande/nn-loading-effect#readme",
+  "dependencies": {
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "nn-loading-effect": "^1.0.2",
+    "parcel": "^2.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.4"
   },
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
-  ]
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
 }
